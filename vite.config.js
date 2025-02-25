@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react() , tailwindcss()],
-  base: "/Portfolio_Sudhanshu/", // ✅ Add trailing slash
+  base: "/portfolioSudhanshu/", // ✅ Add trailing slash
 });
