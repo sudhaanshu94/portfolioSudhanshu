@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Primary Button */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700 shadow-md;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply bg-gray-500 text-white hover:bg-gray-600 active:bg-gray-700 shadow-md;
+  }
+
+  /* Outline Button */
+  .btn-outline {
+    @apply border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600;
+  }
+
+  /* Danger Button */
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600 active:bg-red-700 shadow-md;
+  }
+
+  /* Disabled Button */
+  .btn-disabled {
+    @apply bg-gray-300 text-gray-500 cursor-not-allowed;
+  }
+}
+
+.hero {
+    & .hero-yellow {
+        background-color: rgb(59, 20, 31);
+        display: flex
+;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1 1 0%;
+        border-radius: 30px;
+        padding: 0px 30px;
+    }
+}
+.justify-text {
+    text-align: justify;
+  }
+  
