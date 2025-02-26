@@ -32,10 +32,10 @@ function App() {
 
     return (
         <div className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 min-h-screen no-select">
-            <div className="flex flex-col items-center justify-center w-[60vw] mx-auto">
+            <div className="flex flex-col items-center justify-center sm:w-[60vw] mx-auto">
 
                 {/* Navbar */}
-                <nav className="bg-slate-700 text-white rounded-b-2xl p-4 w-[130%] shadow-lg">
+                <nav className="bg-slate-700 text-white rounded-b-2xl p-4 w-full sm:w-[130%] shadow-lg">
                     <div className="flex justify-between items-center">
 
                         {/* Left Section */}
@@ -132,7 +132,7 @@ function App() {
                 </nav>
 
                 {/* Hero Section */}
-                <div className="flex flex-wrap justify-center gap-6 w-[125%] p-6">
+                <div className="flex flex-wrap justify-center gap-6 md:w-[125%] p-6">
 
                     {/* Left Side - Intro Card */}
                     <div className="flex overflow-hidden items-center justify-center  rounded-3xl bg-slate-900 h-[45vh] w-full md:w-[48%]  transition  hover:scale-102">
@@ -246,7 +246,7 @@ function App() {
                     <div className="text-gray-500 text-lg tracking-widest uppercase">Background</div>
                 </h1>
 
-                <div className="flex flex-wrap md:flex-nowrap justify-between items-center w-full border-3 rounded-xl gap-2 p-8 bg-zinc-200 shadow-lg">
+                <div className="flex flex-wrap md:flex-nowrap justify-between items-center w-[95%] sm:w-full  border-3 rounded-xl gap-2 p-8 bg-zinc-200 shadow-lg">
 
                     {/* 10th (CBSE) */}
                     <div className="p-4 bg-gray-50 shadow-sm rounded-lg border border-gray-300 w-full sm:w-[30%]">
@@ -279,7 +279,7 @@ function App() {
                     <div className="font-extrabold text-5xl text-slate-900 drop-shadow-md">Skills</div>
                 </h1>
 
-                <section className="flex flex-wrap md:flex-nowrap justify-between items-center w-full border-3 rounded-xl py-2 px-5 bg-zinc-200 shadow-lg">
+                <section className="flex flex-wrap md:flex-nowrap justify-between items-center w-[95%] sm:w-full   border-3 rounded-xl py-2 px-5 bg-zinc-200 shadow-lg">
                     {/* Left Side - Technical Skills */}
                     <div className="flex flex-wrap gap-4 w-full md:w-1/2 p-1">
                         {["DSA", "Competitive Programming", "C++", "React", "Tailwind", "JavaScript", "Machine Learning", "SQL Server", "OS - Linux"].map((skill, index) => (
@@ -312,7 +312,7 @@ function App() {
                 </section>
 
                 {/* Internal/Personal Skills Section */}
-                <section className="flex flex-wrap md:flex-nowrap justify-between items-center w-full border-3 rounded-xl py-2 px-5 bg-neutral-300 mt-2 shadow-lg">
+                <section className="flex flex-wrap md:flex-nowrap justify-between items-center  w-[95%] sm:w-full   border-3 rounded-xl py-2 px-5 bg-neutral-300 mt-2 shadow-lg">
                     {/* Left Side - Personal Skills */}
                     <div className="flex flex-wrap gap-4 w-full md:w-1/2 p-1">
                         {["Leadership", "Teamwork", "Time Management", "Adaptability", "Critical Thinking", "Creativity", "Communication", "Proactive"].map((skill, index) => (
@@ -343,7 +343,7 @@ function App() {
 
 
                 {/* projects */}
-                <section id="projects" className="mt-18 w-[130%] h-auto">
+                <section id="projects" className="mt-18 sm:w-[130%] w-[95%] h-auto">
                     <h1 className="text-center mb-6 ">
                         <div className="text-gray-500 text-lg tracking-widest uppercase">recent creations</div>
                         <div className="font-extrabold text-5xl text-gray-900 drop-shadow-lg">Projects</div>
@@ -395,7 +395,7 @@ function App() {
                     <div className="text-gray-500 text-lg tracking-widest uppercase">Milestones & Leadership</div>
                 </h1>
 
-                <div className="sm:w-full bg-zinc-200 shadow-lg rounded-xl p-8 border-3 overflow-hidden w-[120%]">
+                <div className=" w-[95%] sm:w-full bg-zinc-200 shadow-lg rounded-xl p-8 border-3 overflow-hidden">
                     {/* Competitive Programming Achievements */}
                     <div className="mb-8">
                         <h2 className="text-3xl font-extrabold text-gray-900 drop-shadow-md border-l-4 border-slate-500 pl-4">
