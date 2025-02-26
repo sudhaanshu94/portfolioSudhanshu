@@ -194,7 +194,7 @@ function App() {
                         {isVisible && (
                             <div className="p-6 bg-gradient-to-br from-slate-100 to-gray-200 shadow-xl rounded-lg w-full border border-gray-300 flex flex-col items-center">
                                 {/* Profile Icon */}
-                                <div className="w-25 h-25 bg-slate-800 hero-yellow overflow-hidden text-white flex items-center justify-center rounded-full text-3xl font-bold shadow-lg object-cover overflow:hidden">
+                                <div className="w-24 h-24 bg-slate-800 hero-yellow overflow-hidden text-white flex items-center justify-center rounded-full text-3xl font-bold shadow-lg object-cover overflow:hidden">
                                     <img
                                         src="/hero.png"
                                         alt="Hero"
@@ -352,7 +352,7 @@ function App() {
                     <div className="p-6">
                         <div className="flex flex-wrap justify-center w-full h-full p-5 gap-15">
                             {[
-                                { title: "Currency Converter", img: `${import.meta.env.BASE_URL}projectA.jpg`, link: "https://sudhaanshu94.github.io/currencyConverter/" },
+                                { title: "Currency Converter", img: "/projectA.jpg", link: "https://sudhaanshu94.github.io/currencyConverter/" },
                                 { title: "Project B", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-b` },
                                 { title: "Project C", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-c` },
                                 { title: "Project D", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-d` },
