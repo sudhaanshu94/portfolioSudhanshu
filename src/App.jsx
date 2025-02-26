@@ -1,5 +1,5 @@
 
-
+import ProjectGrid from "./components/ProjectGrid";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -184,7 +184,7 @@ function App() {
                         {/* Right Side - Image (Below) not enlarged */}
                         {!isVisible && <div className="hero-image w-auto h-[112%] flex justify-center ">
                             <img
-                                src="/hero.png"
+                                src={`${import.meta.env.BASE_URL}hero.png`}
                                 alt="Hero"
                                 className="hero object-cover w-full h-auto"
                             />
@@ -194,9 +194,9 @@ function App() {
                         {isVisible && (
                             <div className="p-6 bg-gradient-to-br from-slate-100 to-gray-200 shadow-xl rounded-lg w-full border border-gray-300 flex flex-col items-center">
                                 {/* Profile Icon */}
-                                <div className="w-24 h-24 bg-slate-800 hero-yellow overflow-hidden text-white flex items-center justify-center rounded-full text-3xl font-bold shadow-lg object-cover overflow:hidden">
+                                <div className="w-25 h-25 bg-slate-800 hero-yellow overflow-hidden text-white flex items-center justify-center rounded-full text-3xl font-bold shadow-lg object-cover overflow:hidden">
                                     <img
-                                        src="/hero.png"
+                                        src={`${import.meta.env.BASE_URL}hero.png`}
                                         alt="Hero"
                                         className="hero object-cover h-auto"
                                     />
@@ -348,43 +348,8 @@ function App() {
                         <div className="text-gray-500 text-lg tracking-widest uppercase">recent creations</div>
                         <div className="font-extrabold text-5xl text-gray-900 drop-shadow-lg">Projects</div>
                     </h1>
+                    <ProjectGrid />
 
-                    <div className="p-6">
-                        <div className="flex flex-wrap justify-center w-full h-full p-5 gap-15">
-                            {[
-                                { title: "Currency Converter", img: "/projectA.jpg", link: "https://sudhaanshu94.github.io/currencyConverter/" },
-                                { title: "Project B", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-b` },
-                                { title: "Project C", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-c` },
-                                { title: "Project D", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-d` },
-                                { title: "Project E", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-e` },
-                            ].map((project, index) => (
-                                <a
-                                    key={index}
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group relative w-auto h-[30vh] rounded-3xl overflow-hidden shadow-xl transform transition-all duration-200 hover:scale-105 hover:-rotate-2"
-                                    style={{
-                                        background: "rgba(255, 255, 255, 0.1)",
-                                        backdropFilter: "blur(15px)",
-                                        border: "1px solid rgba(255, 255, 255, 0.3)",
-                                        boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)"
-                                    }}
-                                >
-                                    {/* Image Section */}
-                                    <div className="relative w-full h-[85%] overflow-hidden">
-                                        <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                                    </div>
-
-                                    {/* Title Section */}
-                                    <div className="absolute bottom-0 bg-gray-100 text-gray-900 text-xl font-semibold text-center w-full p-2">
-                                        {project.title}
-                                    </div>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
 
                 </section>
 
