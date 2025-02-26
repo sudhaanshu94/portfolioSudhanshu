@@ -1,5 +1,4 @@
-import heroImage from "/portfolioSudhanshu/hero.png";
-import pra from "/portfolioSudhanshu/projectA.jpg";
+
 
 import { useState, useEffect } from "react";
 
@@ -65,7 +64,7 @@ function App() {
                             <button onClick={() => scrollToSection("education")} className="hover:bg-slate-800 hover:text-gray-200 p-2 rounded-lg transition">Education</button>
                             <button onClick={() => scrollToSection("skills")} className="hover:bg-slate-800 hover:text-gray-200 p-2 rounded-lg transition">Skills</button>
                             <button onClick={() => scrollToSection("projects")} className="hover:bg-slate-800 hover:text-gray-200 p-2 rounded-lg transition">Projects</button>
-                            
+
                             <button onClick={() => scrollToSection("achievements")} className="hover:bg-slate-800 hover:text-gray-200 p-2 rounded-lg transition">Achievements</button>
                             <button onClick={toggleVisibility} className="bg-white text-slate-900 w-full p-2 font-bold rounded-lg shadow-md transition hover:scale-105">
                                 {isVisible ? "Profile Pic" : "Contact"}
@@ -166,11 +165,11 @@ function App() {
                                                 href="https://docs.google.com/document/d/10hrkU2UyrM5Y0lCp_IqFJykF82GX47DP/edit?usp=drive_link&amp;ouid=113589517672613341860&amp;rtpof=true&amp;sd=true"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                onClick={(e)=>e.stopPropagation()}
+                                                onClick={(e) => e.stopPropagation()}
                                             >
                                                 View Resume
                                             </a>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -183,12 +182,13 @@ function App() {
                     <button onClick={toggleVisibility} className="flex hero-yellow overflow-hidden items-center justify-center border-2 rounded-3xl bg-slate-900 h-[45vh]  w-full md:w-[48%]    transition  hover:scale-102">
 
                         {/* Right Side - Image (Below) not enlarged */}
-                        {!isVisible && <div className="hero-image w-[48%] h-[112%] md:w-[48%] flex justify-center ">
+                        {!isVisible && <div className="hero-image w-auto h-[112%] flex justify-center ">
                             <img
-                                src={heroImage}
-                                alt="hero image"
-                                className="hero max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] object-cover h-auto"
+                                src={`${import.meta.env.BASE_URL}hero.png`}
+                                alt="Hero"
+                                className="hero object-cover w-full h-auto"
                             />
+
                         </div>
                         }
                         {isVisible && (
@@ -196,10 +196,12 @@ function App() {
                                 {/* Profile Icon */}
                                 <div className="w-25 h-25 bg-slate-800 hero-yellow overflow-hidden text-white flex items-center justify-center rounded-full text-3xl font-bold shadow-lg object-cover overflow:hidden">
                                     <img
-                                        src={heroImage}
-                                        alt="hero image"
+                                        src={`${import.meta.env.BASE_URL}hero.png`}
+                                        alt="Hero"
                                         className="hero object-cover h-auto"
                                     />
+
+
                                 </div>
 
                                 {/* Name */}
@@ -343,18 +345,18 @@ function App() {
                 {/* projects */}
                 <section id="projects" className="mt-18 w-[130%] h-auto">
                     <h1 className="text-center mb-6 ">
-                    <div className="text-gray-500 text-lg tracking-widest uppercase">recent creations</div>
-                    <div className="font-extrabold text-5xl text-gray-900 drop-shadow-lg">Projects</div>
+                        <div className="text-gray-500 text-lg tracking-widest uppercase">recent creations</div>
+                        <div className="font-extrabold text-5xl text-gray-900 drop-shadow-lg">Projects</div>
                     </h1>
 
                     <div className="p-6">
                         <div className="flex flex-wrap justify-center w-full h-full p-5 gap-15">
                             {[
-                                { title: "Currency Converter", img: pra, link: "https://sudhaanshu94.github.io/currencyConverter/" },
-                                { title: "Project B", img: heroImage, link: "/project-b" },
-                                { title: "Project C", img: heroImage, link: "/project-c" },
-                                { title: "Project D", img: heroImage, link: "/project-d" },
-                                { title: "Project E", img: heroImage, link: "/project-e" },
+                                { title: "Currency Converter", img: `${import.meta.env.BASE_URL}projectA.jpg`, link: "https://sudhaanshu94.github.io/currencyConverter/" },
+                                { title: "Project B", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-b` },
+                                { title: "Project C", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-c` },
+                                { title: "Project D", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-d` },
+                                { title: "Project E", img: `${import.meta.env.BASE_URL}hero.png`, link: `${import.meta.env.BASE_URL}project-e` },
                             ].map((project, index) => (
                                 <a
                                     key={index}
@@ -379,13 +381,11 @@ function App() {
                                     <div className="absolute bottom-0 bg-gray-100 text-gray-900 text-xl font-semibold text-center w-full p-2">
                                         {project.title}
                                     </div>
-
-                                    {/* Subtle Light Glow on Hover */}
-                                    {/* <div className="absolute -inset-2 bg-white/10 opacity-0 group-hover:opacity-30 transition duration-500 blur-2xl"></div> */}
                                 </a>
                             ))}
                         </div>
                     </div>
+
                 </section>
 
 
