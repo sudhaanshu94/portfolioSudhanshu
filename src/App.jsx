@@ -1,5 +1,5 @@
-import heroImage from "./assets/dj.png";
-import pra from "./assets/prACurr.jpg";
+import heroImage from "/dj.png";
+import pra from "/prACurr.jpg";
 import { useState, useEffect } from "react";
 
 function App() {
