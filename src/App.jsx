@@ -184,7 +184,7 @@ function App() {
                         {/* Right Side - Image (Below) not enlarged */}
                         {!isVisible && <div className="hero-image w-auto h-[112%] flex justify-center ">
                             <img
-                                src={`${import.meta.env.BASE_URL}hero.png`}
+                                src="/hero.png"
                                 alt="Hero"
                                 className="hero object-cover w-full h-auto"
                             />
@@ -196,7 +196,7 @@ function App() {
                                 {/* Profile Icon */}
                                 <div className="w-25 h-25 bg-slate-800 hero-yellow overflow-hidden text-white flex items-center justify-center rounded-full text-3xl font-bold shadow-lg object-cover overflow:hidden">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}hero.png`}
+                                        src="/hero.png"
                                         alt="Hero"
                                         className="hero object-cover h-auto"
                                     />
