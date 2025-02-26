@@ -1,5 +1,5 @@
-import heroImage from "/dj.png";
-import pra from "/prACurr.jpg";
+import heroImage from "/hero.png";
+import pra from "/projectA.jpg";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -340,14 +340,14 @@ function App() {
 
 
                 {/* projects */}
-                <section id="projects" className="mt-18 w-[130%] ">
+                <section id="projects" className="mt-18 w-[130%] h-auto">
                     <h1 className="text-center mb-6 ">
                     <div className="text-gray-500 text-lg tracking-widest uppercase">recent creations</div>
                     <div className="font-extrabold text-5xl text-gray-900 drop-shadow-lg">Projects</div>
                     </h1>
 
                     <div className="p-6">
-                        <div className="flex flex-wrap justify-center w-full h-[30] p-5 gap-15">
+                        <div className="flex flex-wrap justify-center w-full h-full p-5 gap-15">
                             {[
                                 { title: "Currency Converter", img: pra, link: "https://sudhaanshu94.github.io/currencyConverter/" },
                                 { title: "Project B", img: heroImage, link: "/project-b" },
